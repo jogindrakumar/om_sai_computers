@@ -20,6 +20,7 @@
   <thead>
     <tr>
       <th scope="col">#</th>
+      <th scope="col">service Icon</th>
       <th scope="col">service Name</th>
       <th scope="col">Description</th>
       <th scope="col">Image</th>
@@ -34,6 +35,7 @@
      
     <tr>
       <th scope="row">{{$i++}}</th>
+      <td><span><i class="{{$service->service_icon}}"></i></span></td>
       <td>{{$service->service_name}}</td>
       <td>{{$service->service_text}}</td>
       <td><img src="{{asset($service->service_image)}}" alt="" style="width: 100px; height:100px"></td>
@@ -69,6 +71,13 @@
     <label for="exampleInputPassword1" class="form-label">service image</label>
     <input type="file" class="form-control" name="service_image" id="exampleInputPassword1">
     @error('service_image')
+<span class="text-danger">{{$message}}</span>        
+    @enderror
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">service icon</label>
+    <input type="text" class="form-control" name="service_icon" id="exampleInputPassword1">
+    @error('service_icon')
 <span class="text-danger">{{$message}}</span>        
     @enderror
   </div>

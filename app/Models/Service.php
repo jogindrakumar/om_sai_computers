@@ -12,6 +12,7 @@ class Service extends Model
         'service_name',
         'service_text',
         'service_image',
+        'service_icon',
         
     ];
 }

@@ -29,7 +29,8 @@ class ServiceController extends Controller
         $validated = $request->validate([
         'service_name' => 'required|unique:services|min:4',
         'service_text' => 'required',
-        'service_image' => 'required|mimes:png,jpg,jpeg',
+        'service_image' => 'required|mimes:png,jpg,jpeg,svg',
+        'service_icon' => 'required',
     ]);
     $service_image = $request->file('service_image');
     $name_gen = hexdec(uniqid());
@@ -45,6 +46,7 @@ class ServiceController extends Controller
         'service_name' =>$request->service_name,
         'service_text' => $request->service_text,
         'service_image' => $last_img,
+        'service_icon' => $request->service_icon,
         'created_at' => Carbon::now()
     ]);
 $notification = array(
@@ -84,6 +86,7 @@ $notification = array(
     unlink($old_image);
 
     Service::find($id)->update([
+        
         'service_image' => $last_img,
         'updated_at' => Carbon::now()
     ]);
@@ -94,6 +97,7 @@ $notification = array(
 Service::find($id)->update([
         'service_name' =>$request->service_name,
         'service_text' =>$request->service_text,
+        'service_icon' => $request->service_icon,
         'updated_at' => Carbon::now()
     ]);
 
