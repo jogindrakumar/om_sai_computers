@@ -3,7 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AdminProfileController;
+use App\Http\Controllers\SliderController;
+use App\Http\Controllers\ServiceController;
 use App\Models\Admin;
+use App\Models\Slider;
+use App\Models\Service;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +21,15 @@ use App\Models\Admin;
 */
 
 Route::get('/', function () {
-    return view('index');
+
+    $sliders = Slider::all();
+    $services = Service::all();
+    $first_works = DB::table('works')->find(1);
+    $second_works = DB::table('works')->find(2);
+    $third_works = DB::table('works')->find(3);
+    $sliders = Slider::all();
+    $clients = Client::all();
+    return view('home',compact('sliders','services','first_works','second_works','third_works','sliders','clients'));
 });
 
 Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function () {
