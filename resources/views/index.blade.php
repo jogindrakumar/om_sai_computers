@@ -23,6 +23,12 @@
 
     <!--====== PRINICNG ENDS ======-->
 
+
+     <!--====== PORTFOLIO PART START ======-->
+
+@include('frontend.body.portfolio')
+    <!--====== PORTFOLIO PART ENDS ======-->
+
     <!--====== ABOUT PART START ======-->
 
     @include('frontend.body.about')

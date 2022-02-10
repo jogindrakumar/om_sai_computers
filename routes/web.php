@@ -22,14 +22,7 @@ use App\Models\Service;
 
 Route::get('/', function () {
 
-    $sliders = Slider::all();
-    $services = Service::all();
-    $first_works = DB::table('works')->find(1);
-    $second_works = DB::table('works')->find(2);
-    $third_works = DB::table('works')->find(3);
-    $sliders = Slider::all();
-    $clients = Client::all();
-    return view('home',compact('sliders','services','first_works','second_works','third_works','sliders','clients'));
+    return view('index');
 });
 
 Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function () {

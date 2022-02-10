@@ -15,11 +15,11 @@
                 <div class="col-lg-3 col-md-3">
                     <div class="portfolio-menu text-center mt-50">
                         <ul>
-                            <li data-filter="*" class="active">ALL WORK</li>
-                            <li data-filter=".branding-4">BRANDING</li>
-                            <li data-filter=".marketing-4">MARKETING</li>
-                            <li data-filter=".planning-4">PLANNING</li>
-                            <li data-filter=".research-4">RESEARCH</li>
+                            <li data-filter="*" class="active">ALL SECOND-HAND PC</li>
+                            <li data-filter=".branding-4">i5</li>
+                            <li data-filter=".marketing-4">i3</li>
+                            <li data-filter=".planning-4">Core 2 due</li>
+                            <li data-filter=".research-4">Quadcore</li>
                         </ul>
                     </div>
                     <!-- portfolio menu -->
