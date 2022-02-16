@@ -23,7 +23,19 @@
 			<span>Dashboard</span>
           </a>
         </li>  
-		
+		 <li class="treeview">
+          <a href="#">
+            <i data-feather="message-circle"></i>
+            <span>Product Category</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{route('all.category')}}"><i class="ti-more"></i>Manage</a></li>
+           
+          </ul>
+        </li> 
         <li class="treeview">
           <a href="#">
             <i data-feather="message-circle"></i>

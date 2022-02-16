@@ -12,10 +12,6 @@
 
     <!--====== FEATRES TWO PART ENDS ======-->
 
-    <!--====== PORTFOLIO PART START ======-->
-
-@include('frontend.body.portfolio')
-    <!--====== PORTFOLIO PART ENDS ======-->
 
     <!--====== PRINICNG START ======-->
 

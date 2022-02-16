@@ -5,8 +5,11 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AdminProfileController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ProductCategoryController;
 use App\Models\Admin;
+use App\Models\ProductCategory;
 use App\Models\Slider;
+
 use App\Models\Service;
 
 /*
@@ -50,6 +53,16 @@ Route::group(['prefix' => 'admin', 'middleware'=>['admin:admin']],function(){
     Route::post('/admin/profile/store',[AdminProfileController::class,'AdminProfileStore'])->name('admin.profile.store');
     Route::get('/admin/change/password',[AdminProfileController::class,'AdminChangePassword'])->name('admin.change.password');
     Route::post('/admin/update/password',[AdminProfileController::class,'AdminUpdatePassword'])->name('update.change.password');
+
+
+
+    // Admin Category All Routes category
+
+    Route::get('/category/view',[ProductCategoryController::class,'CategoryView'])->name('all.category');
+    Route::post('/category/store',[ProductCategoryController::class,'CategoryStore'])->name('category.store');
+    Route::get('/category/edit/{id}',[ProductCategoryController::class,'CategoryEdit'])->name('category.edit');
+    Route::post('/category/update',[ProductCategoryController::class,'CategoryUpdate'])->name('category.update');
+    Route::get('/category/delete/{id}',[ProductCategoryController::class,'CategoryDelete'])->name('category.delete');
 
 // all slider route
 
